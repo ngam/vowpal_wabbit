@@ -12,9 +12,9 @@ if(LTO)
   set(VW_LINUX_FLAGS ${VW_LINUX_FLAGS} -flto=thin)
 endif()
 
-if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "x86_64")
-  set(LINUX_X86_64_OPT_FLAGS -msse2 -mfpmath=sse)
-endif()
+# if("${CMAKE_SYSTEM_PROCESSOR}" STREQUAL "x86_64")
+#   set(LINUX_X86_64_OPT_FLAGS -msse2 -mfpmath=sse)
+# endif()
 
 # Add -ffast-math for speed, remove for testability.
 # no-stack-check is added to mitigate stack alignment issue on Catalina where there is a bug with aligning stack-check instructions, and stack-check became default option
