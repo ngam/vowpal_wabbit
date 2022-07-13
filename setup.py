@@ -82,6 +82,11 @@ class BuildPyLibVWBindingsModule(_build_ext):
             "-DBUILD_PYTHON=On",
             "-DBUILD_TESTING=Off",
             "-DWARNINGS=Off",
+            "-DRAPIDJSON_SYS_DEP=On",
+            "-DFMT_SYS_DEP=On",
+            "-DSPDLOG_SYS_DEP=On",
+            "-DVW_BOOST_MATH_SYS_DEP=On",
+            "-DVW_ZLIB_SYS_DEP=On",
         ]
 
         # This doesn't work as expected for Python3.6 and 3.7 on Windows.
